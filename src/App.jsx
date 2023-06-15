@@ -16,15 +16,15 @@ function App() {
     )
   })
 
-  let computerPlay = () => {
-    let array = ['rock', 'paper', 'scissors']
-    let computer = Math.floor((Math.random() * array.length))
+  const computerPlay = () => {
+    const array = ['rock', 'paper', 'scissors']
+    const computer = Math.floor((Math.random() * array.length))
     return array[computer];
    }
 
-  let game = (pick) => {
-    let player = pick
-    let computer = computerPlay()
+  const game = (pick) => {
+    const player = pick
+    const computer = computerPlay()
     if(computer === "rock" && player === "paper"){
       setCommentary(commentary.concat("> bot uses rock, you win"))
       setPlayerScore(playerScore + 1)
@@ -48,7 +48,7 @@ function App() {
     }
   }
 
-  let checkScore = () => {
+  const checkScore = () => {
     if(playerScore === 5){
       setIsPlaying(false)
       setGameOverMsg("You win")
@@ -58,7 +58,7 @@ function App() {
     }
   }
 
-  let screen = () => {
+  const screen = () => {
     if(isPlaying === true){
       return (
         <div className="font-mono my-16 md:my-40">
